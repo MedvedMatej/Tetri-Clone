@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tetris</h1>
+        <div class="container__inner">
+            <div>
+                <p>Controls: </p>
+                <p>
+                    <ul>
+                        <li>P - pause/start game</li>
+                        <li>R - restart game</li>
+                        <li>S - hold on to piece</li>
+                        <li>Arrow Up - rotate piece</li>
+                        <li>Arrow Down - move down</li>
+                        <li>Arrow Left - move left</li>
+                        <li>Arrow Right - move right</li>
+                    </ul>
+                </p>
+            </div>
+
+            <canvas id="canvas" width="10" height="20"></canvas>
+            
+            <div class="container__inner__right">
+                <p id="score"></p>
+                <p id="nextPiece">
+                    Next piece <br>
+                    <canvas id="nextPiece_canvas" width="150" height="150"></canvas>
+                </p>
+                <p>
+                    Held piece <br>
+                    <canvas id="heldPiece_canvas" width="150" height="150"></canvas>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js" charset="utf-8"></script>
+</body>
+</html>
