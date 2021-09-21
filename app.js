@@ -50,9 +50,10 @@ function clearArea(){
 
 function drawArea(){
     for(let i = 0; i < area.length-1; i++){
-        for(let j = 1; j < area[i].length-1; j++){
+        for(let j = 1; j < area[0].length-1; j++){
             if(area[i][j]){
                 //Set color
+                console.log(area)
                 ctx.fillStyle = colors[area[i][j]][1];
                 ctx.fillRect((j-1)*scale+4,i*scale+4,scale,scale);
 
@@ -119,7 +120,8 @@ function mergePiece(activePiece, x, y){
     }
     for(let i = 0; i < activePiece.length; i++){
         for(let j = 0; j < activePiece[i].length; j++){
-            area[y+i][x+j] = area[y+i][x+j] || activePiece[i][j]; 
+            if(y+i < 21)
+                area[y+i][x+j] = area[y+i][x+j] || activePiece[i][j]; 
         }
     }
     return 0;
@@ -211,7 +213,7 @@ blocks = [
 ]
 
 colors = [
-    null,
+    ["#e3e3e3", "#ffffff"],
     ["#ffea00", "#ebd700"],
     ["#ff0000","#eb0000"],
     ["#ffa200", "#de8d00"],
