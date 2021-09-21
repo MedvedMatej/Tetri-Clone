@@ -1,1 +1,1 @@
-# Tetri-Clone
+# Tetris-Clone
